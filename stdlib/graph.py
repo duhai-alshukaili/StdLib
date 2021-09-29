@@ -7,14 +7,14 @@ from stdlib.instream import InStream
 
 class Graph:
 
-    def __init__(self, filename=None):
+    def __init__(self, V=0, filename=None):
         """
         Construct a new Graph object. If a filename is specified,
         populate the Graph object by reading data from the specified
         file.
         """
         self._e = 0   # number of edges
-        self._v = 0   # number of vertices
+        # self._v = 0   # number of vertices
         self._adj = dict()
 
         if filename is not None:
@@ -39,6 +39,10 @@ class Graph:
                 self._validVertex(v)
                 self._validVertex(w)
                 self.addEdge(v, w)
+        else:
+            self._v = V
+            for v in range(self._v):
+                self._adj[v] = list()
 
         
     def  _validVertex(self, v):

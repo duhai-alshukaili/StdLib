@@ -11,3 +11,4 @@ from .minpqueue import MinPQ
 from .maxpqueue import MaxPQ
 from .bag import Bag
 from .edge import Edge
+from .edge_weighted_graph import EdgeWeightedGraph
