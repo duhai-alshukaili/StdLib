@@ -1,11 +1,13 @@
-from stdlib import EdgeWeightedGraph
-from stdlib import stdio
+from stdlib import Stack
 
+queue = Stack()
 
-def main():
-    graph = EdgeWeightedGraph(filename="data/tinyGW.txt")
-    stdio.writeln(graph)
-    print(graph.E())
+queue.push("to")
+queue.push("be")
+queue.push("or")
+queue.push("not")
+queue.push("to")
+queue.push("be")
 
-if __name__ == '__main__':
-    main()
+for s in queue:
+    print(s)
